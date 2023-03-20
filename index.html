@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>window.onerror = function(error, url, line) {parent.postMessage(["console", "❌ -- [ERROR] -- ❌ -- ⚠️ " + error], "*")};var cl = console.log;console.log = function () {var msg = [...arguments].join();parent.postMessage(["console", msg], "*");  }  </script><script>window.onerror = function(error, url, line) {parent.postMessage(["console", "❌ -- [ERROR] -- ❌ -- ⚠️ " + error], "*")};var cl = console.log;console.log = function () {var msg = [...arguments].join();parent.postMessage(["console", msg], "*");  } 
+  <head>
+    <script>window.onerror = function(error, url, line) {parent.postMessage(["console", "❌ -- [ERROR] -- ❌ -- ⚠️ " + error], "*")};var cl = console.log;console.log = function () {var msg = [...arguments].join();parent.postMessage(["console", msg], "*");  }  </script><script>window.onerror = function(error, url, line) {parent.postMessage(["console", "❌ -- [ERROR] -- ❌ -- ⚠️ " + error], "*")};var cl = console.log;console.log = function () {var msg = [...arguments].join();parent.postMessage(["console", msg], "*");  } 
 </script><script crossorigin src="https://aframe.io/releases/0.8.2/aframe.js">
 </script>
     <script crossorigin src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js">
@@ -914,328 +914,109 @@ if ( ageRatio >= 0.0 && ageRatio <= 1.0 )
     <script crossorigin src="https://unpkg.com/aframe-area-light-component/dist/aframe-area-light-component.min.js">
 </script>
     <script crossorigin src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js">
-</script>     
-    <img id="thumbHome" src="global.png">
-    <img id="ice" src="ice.png">
-    <img id="tem" src="temperture.png" > 
- 
+</script> 
+    <script crossorigin src="https://cdn.jsdelivr.net/gh/bryik/aframe-bmfont-text-component@e041ead91a309c924408087a0f7aef0cb870e2f9/dist/aframe-bmfont-text-component.min.js">
+</script>
+    <script crossorigin src="https://unpkg.com/aframe-lsystem-component/dist/aframe-lsystem-component.min.js">
+</script>
   </head>
-  
+  <body>
+    <a-scene background="color:black">
+      <a-cursor></a-cursor>
+      <a-entity camera position="0 1.6 0"></a-entity>
+      <a-camera>
+        <a-cursor color="#4CC3D9"></a-cursor>
+      </a-camera>
+      <a-assets>
+        <video id="globalwarm" autoplay loop="true" src="Map 02.mp4"> </video>
+        <video id="global" autoplay loop="true" src="codata.mp4"> </video>
+        <video id="mp4" autoplay loop="true" src="My Movie 2.mp4"> </video>
+        
+      </a-assets>
+  <!-- Using the asset management system. -->
+  <a-videosphere src="#globalwarm "></a-videosphere>
 
-<body>
-<a-scene background="color:black;">
-<a-light type="ambient" color="light purple"></a-light>
-<a-camera fov="50" position="0 0 16">
-<a-cursor color="#4CC3D9"></a-cursor>
-</a-camera>
-<a-cursor color="#4CC3D9"></a-cursor>
-<!--torus-->
-   <a-entity light="type: point; intensity: 3.8; distance: 10000; decay: 2" position="0 0 0"></a-entity>
-  
-      <!-- UI -->
-      
-      
-     <a-link href="https://mimicproject.com/code/ac566c37-20a6-7c0b-d42f-5efa6388087e?embed=true"
-     position="10 -7 -11 " visible="false" title="Main Page"></a-link>
-     <a-image  position="10 -7 -11" src="arcticsea.png" scale="2 2 2" ></a-image>
+     <a-assets>
+       <a-cursor color="#4CC3D9"></a-cursor>
+        <img id="blob" src="assets/blob.png">
+        <a-mixin id="label" text="align: center; width: 10" position="0 -1.5 0"></a-mixin>
+        <img id="thumbHome" src="global.png">
+        <a-asset-item id="1" src="seawarming.png"></a-asset-item>
+        <a-asset-item id="2" src="icesheet.png"></a-asset-item>
+        <a-asset-item id="3" src="global temperature.png"></a-asset-item>
+        <a-asset-item id="4" src="arcticsea.png"></a-asset-item>
+        <a-asset-item id="5" src="carbondioxide.png"></a-asset-item>
+        <a-asset-item id="6" src="Main Page.png"></a-asset-item>
+        <a-asset-item id="7" src="Group.png"></a-asset-item>
+        <img id="deco" src="decoration.png">
+        <img id="font" src="text.png">
+        </a-assets>  
+       
+  <!-- UI -->
+       <a-link href="https://mimicproject.com/code/ac566c37-20a6-7c0b-d42f-5efa6388087e?embed=true"
+     position="10 -7 -11 " visible="false" ></a-link>
+     <a-image  position="10 -7 -11" src="Arctic Sea.png" scale="2 2 2" ></a-image>
      <a-text value="Arctic Sea Ice" position="9.1 -5.5 -11"></a-text>  
   
      <a-link href="https://mimicproject.com/code/ba3164b4-f0ec-71c5-c0a8-74b368ec2699?embed=true" position="2 -7 -11" visible="false" title="Main Page"></a-link>
-     <a-image  position="2 -7 -11" src="global_temperature.png" scale="2 2 2" ></a-image>
+     <a-image  position="2 -7 -11" src="Global Temperature.png" scale="2 2 2" ></a-image>
      <a-text value="Global Temperature" position="1.1 -5.5 -11"></a-text>
   
      <a-link href="https://mimicproject.com/code/f5a0462a-37dd-7fd0-6331-38175dc6f554?embed=true" position="-6 -7 -11" visible="false" title="Main Page"></a-link>
-     <a-image  position="-6 -7 -11" src="seawarming.png" scale="2 2 2" ></a-image>
+     <a-image  position="-6 -7 -11" src="Sea warming.png" scale="2 2 2" ></a-image>
      <a-text value="Sea Warming" position="-6.9 -5.5 -11"></a-text>
   
-      <a-link href="https://git.arts.ac.uk/pages/FU-15451353/carbon/" position="-2 -7 -11" visible="false" title="Main Page"></a-link>
-     <a-image  position="-2 -7 -11" src="carbondioxide.png" scale="2 2 2" ></a-image>
+      <a-link href="https://mimicproject.com/code/2ee6ba8d-ba44-68c1-43c1-68d120ba3439?embed=true" position="-2 -7 -11" visible="false" title="Main Page"></a-link>
+     <a-image  position="-2 -7 -11" src="Carbon Dioxide.png" scale="2 2 2" ></a-image>
      <a-text value="Carbon Dioxide" position="-2.9 -5.5 -11"></a-text>
   
      <a-link href="https://mimicproject.com/code/782efce1-5790-c997-38df-b896a07416b5?embed=true" position="6 -7 -11" visible="false" title="Main Page"></a-link>
-     <a-image  position="6 -7 -11" src="icesheet.png" scale="2 2 2" ></a-image>
+     <a-image  position="6 -7 -11" src="ICEsheet.png" scale="2 2 2" ></a-image>
      <a-text value="Ice Sheets" position="5.5 -5.5 -11"></a-text>
   
-      <a-link href="https://mimicproject.com/code/8816687c-d2a3-b5eb-18f0-6103c34cc98a?embed=true" position="-10 -7 -11 " visible="false" title="Main Page"></a-link>
-     <a-image  position="-10 -7 -11" src="Main_Page.png" scale="2 2 2" ></a-image>
+     <a-link href="https://mimicproject.com/code/60084886-30d2-47a5-0302-30005292314f?embed=true" position="-10 -7 -11 " visible="false" title="Main Page"></a-link>
+     <a-image  position="-10 -7 -11" src="Group1.png" scale="2 2 2" ></a-image>
      <a-text value="Main Page" position="-10.9 -5.5 -11"></a-text>
-       
-
-<a-torus rotation="0 0 0" color="#363636" radius="30" radius-tubular="0.14" position="0 0 -24" material="opacity:0.9;metalness:1;" geometry="segments-tubular:180"></a-torus>
-<!--26-->        
-<a-circle color="white" radius="26" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
-<!--25-->
-<a-circle color="white" radius="25" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
-  
- <!--24.6-->
-
- 
-<!--20-->
-<a-circle color="white" radius="20" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
- <!--17-->
-<a-circle color="white" radius="17" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
-<!--14-->
-<a-circle color="white" radius="14" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
- <!--11-->
-<a-circle color="white" radius="11" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
- <!--8-->
-<a-circle color="white" radius="8" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
-<!--5-->
-<a-circle color="white" radius="5" position="0 0 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
- <!--SUN0--> 
-<a-entity animation="property: rotation; loop: true; from: 0 0 -24; to: 0 0 -20; dur: 20000; easing: linear;">
-<a-sphere position="0 0 -24" 
-          src="sun.jpeg"
-          color="#dbc625" 
-          radius="1" rotation="360 0 0"
-          ></a-sphere>
-</a-entity>
-  
- <!--M 01-->
- <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 2410;easing: linear;">
-  <a-sphere position="2.25 -4.5 -24" color="#363636" src="Mercury.jpeg" radius="0.3" ></a-sphere>    
-  </a-entity>
-
-<!--Venus-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 6164;easing: linear;">
-<a-sphere position="7 3.6 -24" color="#363636" src="Venus.jpg" radius="0.3"></a-sphere></a-entity>
-  
- 
-  
-<!--Earth-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000;easing: linear;">
-<a-sphere position="10 4.7 -24" color="#363636" src="earth1.jpg" radius="0.3"></a-sphere></a-entity>
-  
-  
- 
-  <a-mixin id="rotation" animation="property: rotation; loop: true; from:  0 0 0; to: 0 360 0; dur: 20000;  ;"></a-mixin>
-
-       <!--there are two orbits here- the earth itself and the earth around the moon-->
-            <a-entity  mixin="orbit"  rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000">
-                <a-entity position="11 24 -24">
-                    <a-entity >
-                        <a-sphere position="0 0 0" radius="0.5"  src="#E" mixin="rotation" ></a-sphere>
-                        <a-entity id="moon-container" mixin="orbit">
-                            <a-sphere position="-1 0 0" radius="0.10" id="moon" src="#moon-texture"  ></a-sphere>
-                        </a-entity>
-                    </a-entity>
+ <!--Sphere Video-->
+      
+<a-entity >
+   <a-sphere radius="11"
+             position="0 2 -32"
+             rotation="0 0 0"
+             src="My Movie 2.mp4"
+             animation="property: rotation; to:23.66 360 0; loop: true; dur: 30000;easing: linear;">
+              </a-sphere>
                 </a-entity>
-            </a-entity>
-  
-<!--Moon-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000;easing: linear;">
-<a-sphere position="12.5 -0.1 -24"   color="#363636" src="moonn.jpeg" radius="0.04"></a-sphere></a-entity>
-  
+        
+<!--DATA Video-->
+ <a-box geometry="width:6; height:3; depth:0.0001" 
+        src="codata.mp4"
+        position="-10 2 -11"></a-box>
+        
+        <!--TEXT PNG -->   
+ <a-box geometry="width:7.14; height:2.694; depth:0.0001" 
+        src="text.png"
+        position="14 2 -15"></a-box>
+      
+        <!--decoration   -->  
+<a-circle color="#CCC" radius="0.12" position="0 15 -20" opacity="0.5"></a-circle>
+<a-circle color="#CCC" radius="0.12" position="5 15 -20" opacity="0.5"></a-circle>      
+<a-circle color="#CCC" radius="0.12" position="-5 15 -20" opacity="0.5"></a-circle>
+<a-circle color="#CCC" radius="0.12" position="8 15 -20" opacity="0.5"></a-circle>     
+<a-circle color="#CCC" radius="0.12" position="-8 15 -20" opacity="0.5"></a-circle>    
+<a-circle color="#CCC" radius="0.12" position="14 16 -20" opacity="0.5"></a-circle> 
+<a-circle color="#CCC" radius="0.12" position="-14 16 -20" opacity="0.5"></a-circle> 
+<a-entity line="start:12 16 -20; end: -12 16 -20; color: white"></a-entity>
 
- <!--Mars-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 7000;easing: linear;">
-<a-sphere position="12.5 6 -24" src="Mercury.jpeg" color="#363636" ></a-sphere></a-entity>
-  
 
- <!--saturn-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000;easing: linear;">
-<a-sphere position="-13.5 10.5 -24" src="saturn.jpeg" scale="2 2 2" color="#363636" radius="0.5"></a-sphere></a-entity>
-  
-
-  <!--uranus-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000;easing: linear;">
-<a-sphere position="-17.2 10.2 -24" src="uranus.jpeg" color="#363636" radius="1.1"></a-sphere></a-entity>
-  
-<!--neptune-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 5800;easing: linear;">
-<a-sphere position="-22.3 10 -24" color="#363636" src="neptune.jpeg" radius="0.4"></a-sphere></a-entity>
-  
-  
- <!--pluto-->
-<a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 5600;easing: linear;">
-<a-sphere position="-23.5 -6 -24" color="#363636" src="pluto.jpeg" radius="0.6"></a-sphere></a-entity>
-  
-  
-  <!--top right Torus-->
-  <a-torus rotation="0 0 0" color="#363636" radius="10" radius-tubular="0.14" src="#SR" position="-30 27 -24" material="opacity:0.9;metalness:1;" geometry="segments-tubular:180" ></a-torus>
-  <!--top right 8-->
-    <a-torus rotation="0 0 0" color="white" radius="8" radius-tubular="0.02" position="-30 27 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-   <!--top right7-->
-   <a-torus rotation="0 0 0" color="white" radius="7" radius-tubular="0.02" position="-30 27 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right6-->
-   <a-torus rotation="0 0 0" color="white" radius="6" radius-tubular="0.02" position="-30 27 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right5-->
-   <a-torus rotation="0 0 0" color="white" radius="5" radius-tubular="0.02" position="-30 27 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right4-->
-   <a-torus rotation="0 0 0" color="white" radius="4" radius-tubular="0.02" position="-30 27 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  
-   <!--TEST #sphere1 -->
-  <a-entity position="-30 27 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-        <a-sphere id="#sphere0" position="-8 0 0" radius="0.6" src="pluto.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-     <!--TEST #sphere2 -->
-  <a-entity position="-30 27 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-        <a-sphere id="#sphere2" position="-5 -3 0" radius="0.4" color="#363636" src="Mercury.jpeg"></a-sphere>
-</a-entity>
-  
-  <!--TEST #sphere3 -->
-  <a-entity position="-30 27 -24" rotation="360 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-  <a-sphere id="#sphere3" position="0 0 0" radius="2" src="pluto.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-  
+        <!--Circle Line  -->  
+        <a-circle color="#292929" radius="80"  opacity="0.5" position="0 0 -30" material="opacity:0.5;metalness:1;" geometry="segments:100"></a-circle>
  
-  
-  <!--Middle right Torus-->
-  <a-torus rotation="0 0 0" color="#363636" radius="7.8" radius-tubular="0.2" position="-38 10 -24" material="opacity:0.9;metalness:1;" geometry="segments-tubular:180"></a-torus>
-
-  <!--TEST #sphere4 -->
-  <a-entity position="-38 10 -24" rotation="360 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-  <a-sphere id="#sphere4" position="0 0 0" radius="3.8"  src="moonn.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-  <!--bottle right Torus-->
-
-   <!--bottle right 8-->
-    <a-torus rotation="0 0 0" color="white" radius="8" radius-tubular="0.02" position="-38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-   <!--bottle right7-->
-   <a-torus rotation="0 0 0" color="white" radius="7" radius-tubular="0.02" position="-38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--bottle right6-->
-   <a-torus rotation="0 0 0" color="white" radius="6" radius-tubular="0.02" position="-38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--bottle right5-->
-   <a-torus rotation="0 0 0" color="white" radius="5" radius-tubular="0.02" position="-38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--bottle right4-->
-   <a-torus rotation="0 0 0" color="white" radius="4" radius-tubular="0.02" position="-38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-
-  <!--TEST #sphere6 -->
-  <a-entity position="-38 -8 -24" rotation="360 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-        <a-sphere id="#sphere6" position="0 0 0" radius="2.2" src="Venus.jpg" color="#363636"></a-sphere>
-</a-entity>
-  
-     <!--TEST #sphere7 -->
-  <a-entity position="-38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-        <a-sphere id="#sphere7" position="-8 0 0" radius="0.4"  src="neptune.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-   <!--TEST #sphere8 -->
-  <a-entity position="-38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 14000; easing: linear;">  
-        <a-sphere id="#sphere8" position="-7 0 0" radius="0.3"  src="pluto.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-     <!--TEST #sphere9 -->
-  <a-entity position="-38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 14000; easing: linear;">  
-        <a-sphere id="#sphere9" position="-7 0 0" radius="0.3" src="Venus.jpg" color="#363636"></a-sphere>
-</a-entity>
-     <!--TEST #sphere10 -->
-  <a-entity position="-38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 16000; easing: linear;">  
-    <a-sphere id="#sphere10" position="-6 0 0" radius="0.2"  src="saturn.jpeg" color="#363636"></a-sphere>
-    <a-torus rotation="0 0 0" color="#363636" radius="0.4" radius-tubular="0.02" position="-6 0 0" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>   
-</a-entity>
-  <!--TEST #sphere11 -->
-  <a-entity position="-38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 8000; easing: linear;">  
-   <a-sphere id="#sphere11" position="-5 0 0" radius="0.3" src="uranus.jpeg" color="#363636"></a-sphere>
-</a-entity>
-    <!--TEST #sphere12 -->
-  <a-entity position="-38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 6000; easing: linear;">  
-   <a-sphere id="#sphere12" position="-4 0 0" radius="0.1" src="neptune.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-  <!--top right Torus-->
-  
-<a-torus rotation="0 0 0" color="#363636" radius="10" radius-tubular="0.14" position="30 29 -24" material="opacity:0.9;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right 9-->
-  <a-torus rotation="0 0 0" color="#363636" radius="9" radius-tubular="0.02" position="30 29 -24" material="opacity:0.9;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right 8-->
-    <a-torus rotation="0 0 0" color="white" radius="8" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right 8.5-->
-  <a-torus rotation="0 0 0" color="#363636" radius="8.5" radius-tubular="0.02" position="30 29 -24" material="opacity:0.9;metalness:1;" geometry="segments-tubular:180"></a-torus>
-   <!--top right7-->
-   <a-torus rotation="0 0 0" color="white" radius="7" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right7.5-->
-   <a-torus rotation="0 0 0" color="white" radius="7.5" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-   <!--top right6.5-->
-   <a-torus rotation="0 0 0" color="white" radius="6.5" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right6-->
-   <a-torus rotation="0 0 0" color="white" radius="6" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right5-->
-   <a-torus rotation="0 0 0" color="white" radius="5" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right5.5-->
-   <a-torus rotation="0 0 0" color="white" radius="5.5" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--top right4-->
-   <a-torus rotation="0 0 0" color="white" radius="4" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-   <!--top right4-->
-   <a-torus rotation="0 0 0" color="white" radius="4.5" radius-tubular="0.02" position="30 29 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
- 
-  
-  
-   <!--TEST #sphere13 -->
-  <a-entity position="30 29 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-        <a-sphere id="#sphere13" position="8 0 0" radius="0.4" src="neptune.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-  <!--TEST #sphere14 -->
-  <a-entity position="30 29 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-   <a-sphere id="#sphere14" position="0 0 0" radius="3" src="Mercury.jpeg" color="#363636"></a-sphere>
-</a-entity>
-    <!--TEST #sphere15 -->
-  <a-entity position="30 29 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 8000; easing: linear;">  
-        <a-sphere id="#sphere15" position="6 0 0" radius="0.3" src="saturn.jpeg" color="#363636"></a-sphere>
-</a-entity>
-   <!--TEST #sphere16 -->
-  <a-entity position="30 29 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 7000; easing: linear;">  
-        <a-sphere id="#sphere16" position="2 0 0" radius="0.3" src="moonn.jpeg" color="#363636"></a-sphere>
-</a-entity>
-  
-  
- 
-  <!--Middle left Torus-->
-  <a-torus rotation="0 0 0" color="#363636" radius="10" radius-tubular="0.1" position="39 10 -24" material="opacity:0.9;metalness:1;" geometry="segments:180"></a-torus>
-   
-  <!--Middle left frame--> 
-  <a-circle color="white" radius="10" position="39 10 -24" wireframe="true" material="opacity:0.9;metalness:1;" geometry="segments:99"></a-circle>
-  
- <a-torus rotation="0 0 0" color="white" radius="10" radius-tubular="0.02" position="39 10 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  
-  <!--TEST #sphere17 -->
-  <a-entity position="38 10 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-  <a-sphere id="#sphere17" position="0 0 0" radius="4" src="uranus.jpeg" color="#363636"></a-sphere>
-    </a-entity>
-  
-   <!--Middle leftleft sphere-->
-
-   <!--bottle left 8-->
-    <a-torus rotation="0 0 0" color="white" radius="8" radius-tubular="0.02" position="38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-   <!--bottle left7-->
-   <a-torus rotation="0 0 0" color="white" radius="7" radius-tubular="0.02" position="38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--bottle left6-->
-   <a-torus rotation="0 0 0" color="white" radius="6" radius-tubular="0.02" position="38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--bottle left5-->
-   <a-torus rotation="0 0 0" color="white" radius="5" radius-tubular="0.02" position="38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  <!--bottle left4-->
-   <a-torus rotation="0 0 0" color="white" radius="4" radius-tubular="0.02" position="38 -8 -24" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus>
-  
-  
-   <!--TEST #sphere18 -->
-  <a-entity position="38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 16000; easing: linear;">  
-  <a-sphere id="#sphere18" position="-6 0 0" radius="0.3" src="uranus.jpeg" color="#363636"></a-sphere>
-  <a-torus rotation="0 0 0" color="#363636" radius="0.5" radius-tubular="0.02" position="-6 0 0" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus> </a-entity>
-  
-   <!--TEST #sphere19 -->
-  <a-entity position="38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear;">  
-        <a-sphere id="#sphere19" position="0 0 0" radius="3" src="Mercury.jpeg" color="#363636"></a-sphere>
-    </a-entity>
-    <!--TEST #sphere20 -->
-  <a-entity position="38 -8 -24" rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; dur: 8000; easing: linear;">  
-    <a-sphere id="#sphere20" position="-8 0 0" radius="0.3" src="#S" color="#363636"></a-sphere>
-    <a-torus rotation="0 0 0" color="#363636" radius="0.5" radius-tubular="0.02" position="-6 0 0" material="opacity:0.8;metalness:1;" geometry="segments-tubular:180"></a-torus> </a-entity>
- 
-  
-   <!--Praticle-->
-  <a-entity position="0 0 0">
-  <a-sphere mesh-particles="spawnRate: 10000; lifeTime: 2; radialType: sphere; radialPosition: 14; scale: .01...02; opacity: 0,0.5,0; color: #ddd..white"></a-sphere>
-           </a-entity>
-  
+<a-circle color="#6b6b6b" radius="80"  position="0 0 -30" wireframe="true" opacity="0.4" material="opacity:0.9;metalness:1;" geometry="segments:100"></a-circle>
        
-  
-  <!--sky Line  -->  
+        <!--sky Line  -->  
         <a-entity position="0 0 -20">
-        <a-sphere mesh-particles="spawnRate: 10000; lifeTime: 2; radialType: sphere; radialPosition: 36; scale: .01...02; opacity: 1,0.4,1; color: #ddd..white;easing:linear;"></a-sphere>
+        <a-sphere mesh-particles="spawnRate: 10000; lifeTime: 2; radialType: sphere; radialPosition: 30; scale: .01...02; opacity: 1,0.4,1; color: #ddd..white;easing:linear;"></a-sphere>
            </a-entity>
          <script>
             let id = document.getElementById("toggle")
@@ -1245,11 +1026,13 @@ if ( ageRatio >= 0.0 && ageRatio <= 1.0 )
               id.setAttribute("mesh-particles", {enable})
             }, 5000)
          
-</script> 
-  
-  
+</script>
+        
 
-      </a-scene>
 
-</body>
+
+      <a-sky color="black"></a-sky>
+    </a-scene>
+  </body>
 </html>
+  
